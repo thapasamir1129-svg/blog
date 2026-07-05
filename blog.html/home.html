@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            color: rgb(75, 74, 74);
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-family: "Cedarville Cursive", cursive;
+            color: black;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px;
+            margin: 10px;
+            font-size: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav {
+            border: 1px solid;
+            color: black;
+        }
+
+        body {
+            padding: 10px;
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: whitesmoke;
+            font-family:
+                Helvetica Neue,
+                Helvetica,
+                Arial,
+                sans-serif;
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #fcf9f9;
+            font-family:
+                Helvetica Neue,
+                Helvetica,
+                Arial,
+                sans-serif;
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 75%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero {
+            display: flex;
+        }
+
+        .hero .content .one h5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+        }
+
+        .hero .content .one h6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+        }
+
+        .hero .content .one img {
+            width: 80%;
+            height: 60%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10%;
+        }
+
+        .hero .content .one p {
+            padding: 30px 110px 50px 110px;
+            margin: 15 px;
+        }
+
+        .hero .content1 .first img {
+            width: 100%;
+            height: 30%;
+            margin-right: 5%;
+        }
+
+        .hero .content1 .first {
+            border: 1px solid#ddd;
+            position: relative;
+            left: -30px;
+            margin-bottom: 20px;
+            padding: 0px 15px 10px 15px;
+        }
+
+        .hero .content1 .second {
+            border: 1px solid#ddd;
+            position: relative;
+            left: -30px;
+            /* background-color: rgb(38, 35, 35); */
+            margin-bottom: 10px;
+            padding: 0px 15px 15px 15px;
+        }
+
+        .hero .content1 .second .email {
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero .content1 .second .password {
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero .content1 .third {
+            border: 1px solid #ddd;
+            position: relative;
+            padding: 0px 15px 15px 40px;
+            margin-right: 50px;
+        }
+
+        .line-text {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .line-text hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid#ddd;
+        }
+
+        .line-text span {
+            font-size: 12px;
+            letter-spacing: 2px;
+            background: white;
+            padding: 15px 10px 30px;
+        }
+
+        .content1 .fourth {
+            border: 1px solid #ddd;
+            padding: 15px 15px 15px 0px;
+            margin: 15px 50px 0px 0;
+        }
+
+        .content1 .fourth h5 {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 15px;
+        }
+
+        .content1 .fourth ul li {
+            list-style: none;
+        }
+
+        .hero .content .two {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .hero .content .two .flower {
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 30px -10px 30px 130px;
+            padding: 30px;
+        }
+
+        .hero .content .two .phool {
+            justify-content: center;
+            text-align: center;
+            margin: 30px 100px;
+            border: 1px solid #ddd;
+            margin-right: 180px;
+            padding: 30px;
+        }
+
+        .hero .content .two .flower img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .hero .content .two .phool img {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            padding-left: 90px;
+        }
+
+        .hero .content .three {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .hero .content .three .tulip {
+            justify-content: center;
+            text-align: center;
+            width: 550px;
+            border: 1px solid #ddd;
+            margin: 30px 10px 30px 160px;
+            padding: 30px;
+        }
+
+        .hero .content .three .sunflower {
+            justify-content: center;
+            text-align: center;
+            width: 500px;
+            margin: 30px 100px;
+            border: 1px solid #ddd;
+            margin-right: 180px;
+            padding: 30px;
+        }
+
+        .hero .content .three .tulip img {
+            justify-content: center;
+            text-align: center;
+            width: 300px;
+            padding-left: 50px;
+        }
+
+        .hero .content .three .sunflower img {
+            width: 300px;
+            padding-left: 50px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 200px;
+            border: 2px solid #ddd;
+            margin: 40px;
+            padding: 30px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 200px;
+            border: 2px solid #ddd;
+            margin: 40px;
+            padding: 30px;
+        }
+
+        .contact .a {
+            font-family: cursive;
+        }
+
+        .contact .b button {
+            margin: 10px;
+        }
+
+        .contact .c ul {
+            list-style: none;
+        }
+
+        .contact .d ul {
+            list-style: none;
+        }
+
+        /* .contact .last {
+            display: flex;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>lets Blog</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="home">HOME</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li><a href="single posts">SINGLE POSTS</a><i class="fa-solid fa-angle-down"></i></li>
+            <li><a href="pages">PAGES</a><i class="fa-solid fa-angle-down"></i></li>
+            <li><a href="category">CATEGORY</a><i class="fa-solid fa-angle-down"></i></li>
+            <li><a href="about">ABOUT</a><i class="fa-solid fa-angle-down"></i></li>
+            <li><a href="contact me">CONTACT ME</a><i class="fa-solid fa-angle-down"></i></li>
+            <li><a href="features">FEATURES</a><i class="fa-solid fa-angle-down"></i></li>
+        </ul>
+    </nav>
+    <swiper-container class="mySwiper" navigation="true">
+        <swiper-slide><img src="image1.jpg" alt="image1"></swiper-slide>
+        <swiper-slide><img src="image2.jpg" alt="image2"></swiper-slide>
+        <swiper-slide><img src="image3.jpg" alt="image3"></swiper-slide>
+        <swiper-slide><img src="image4.jpg" alt="image4"></swiper-slide>
+        <swiper-slide><img src="image5.jpg" alt="image5"></swiper-slide>
+        <swiper-slide><img src="image6.jpg" alt="image6"></swiper-slide>
+        <swiper-slide><img src="image7.jpg" alt="image7"></swiper-slide>
+        <swiper-slide><img src="image8.jpg" alt="image8"></swiper-slide>
+        <swiper-slide><img src="image9.jpg" alt="image9"></swiper-slide>
+    </swiper-container>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
+    <br>
+    <div class="hero">
+        <div class="content">
+            <div class="one">
+                <h5>BEAUTY OF NATURE</h5>
+                <h6>
+                    --july 22,2015--
+                </h6>
+                <br>
+                <img src="image9.jpg" alt="immage9">
+                <p>
+                    Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla
+                    fringilla
+                    purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl
+                    aliquam. …
+                </p>
+            </div>
+            <div class="line-text">
+                <hr>
+                <span>ART/LIFESTYLE</span>
+                <hr>
+            </div>
+            <div class="two">
+                <div class="flower">
+                    <img src="image12.jpg" alt="flower"><br>
+                    <h5>FASHION MODEL SHOOT</h5>
+                    <p><i>july 22,2015</i></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nemo ratione fuga. Aliquam,
+                        expedita rem deserunt aperiam, possimus quisquam inventore reprehenderit consectetur
+                        dignissimos, aut quo aspernatur eius nemo incidunt eum.</p>
+                </div>
+                <div class="phool">
+                    <img src="image12.jpg" alt="image">
+                    <h5>GOLDEN SNOW LAND</h5>
+                    <p><i>july 22,2015</i></p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae commodi dicta, beatae modi
+                        molestiae dolore illum soluta et, ullam enim provident voluptatibus quod! Odio cumque enim
+                        deleniti et tenetur harum?</p>
+                </div>
+            </div>
+            <div class="three">
+                <div class="tulip">
+                    <img src="image13.jpg" alt="tulip">
+                    <h5>URBAN EXPLORATION</h5>
+                    <p><i>july 22,2015</i></p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda harum quidem consequatur
+                        sapiente facilis dicta voluptatibus! Commodi, similique corporis exercitationem dolor expedita
+                        facilis quis laudantium eum veniam voluptatibus quidem. Adipisci!</p>
+                </div>
+                <div class="sunflower">
+                    <img src="image14.jpg" alt="sunflower"><br>
+                    <h5>EXTREME SPORTS</h5>
+                    <p><i>july 22,2015</i></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, facere odit consequuntur quam
+                        culpa dignissimos est dicta dolor omnis autem accusantium unde totam rerum, ab mollitia ullam
+                        atque numquam ea!</p>
+                </div>
+            </div>
+            <div class="four"></div>
+        </div>
+        <!-- right side -->
+        <div class="content1">
+            <div class="first">
+                <h5>About Me</h5>
+                <img src="image10.jpg" alt="image10">
+                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+            </div>
+            <div class="second">
+                <h5>SUSCRIBE TO MY NEWSLETTER </h5>
+                <input type="email" class="email" id="email" placeholder="Email"> <br>
+                <input type="password" class="password" id="password" placeholder="password"> <br>
+            </div>
+            <div class="third">
+                <h5>FOLLOW ME ON</h5>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </div>
+            <div class="fourth">
+                <h5>CATEGORIES</h5>
+                <ul>
+                    <li>ART</li>
+                    <hr>
+                    <li>food</li>
+                    <hr>
+                    <li>Lifestyle</li>
+                    <hr>
+                    <li>Movie</li>
+                    <hr>
+                    <li>Music</li>
+                    <hr>
+                    <li>Top</li>
+                    <hr>
+                    <li>Travel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+
+        <div class="a">
+            letsblog
+        </div>
+        <div class="b">
+            <h5>SUBSCRIPTION</h5>
+            <input type="text" id="email" placeholder="your email address">
+            <br>
+            <button>SUSCRIBE</button>
+        </div>
+        <div class="c">
+            <ul>
+                <h5>RECENT POSTS</h5>
+                <li>
+                    <h3>BEAUTY OF NATURE</h3>
+                </li>
+                <p>july 22,2015</p>
+                <li>
+                    <h3>FASHION MODEL SHOOT</h3>
+                </li>
+                <p>july 22,2015</p>
+                <li>
+                    <h3>GOLDEN SNOW LAND</h3>
+                </li>
+                <p>july 22,2015</p>
+            </ul>
+        </div>
+        <div class="d">
+            <ul>
+                <h5>POPULAR POSTS</h5>
+                <li>
+                    <h3>TOP 10 INGREDIENTS</h3>
+                </li>
+                <p>july 22,2015</p>
+                <li>
+                    <h3>FAMILY COMES FIRST</h3>
+                </li>
+                <p>july 22,2015</p>
+                <li>
+                    <h3>GOLDEN SNOW LAND</h3>
+                </li>
+                <p>july 22,2015</p>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="last">
+        <p>© Copyright LetsBlog Theme Demo - Theme by ThemeGoods</p>
+        <ul>
+            <li>Home</li>
+            <li>lifestyle</li>
+            <li>About</li>
+            <li>Contact Me</li>
+        </ul>
+
+    </div>
+    </div>
+    <hr> -->
+
+
+</body>
+
+</html>
