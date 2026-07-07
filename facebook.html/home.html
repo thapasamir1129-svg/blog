@@ -1,73 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>facebook layout</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-        <style>
-            nav {
-                display: flex;
-                align-items: center;
-                gap: 40px;
-                border: 1px solid ;
-                padding: 15px;
-                margin: 0px 15px;
-            }
-            nav .logo {
-                height: 100%;
-                width: 100%;
-                gap: 20px; 
-            }
-            nav .logo i {
-                margin-left: 45px;
-                font-size: 30px;
-            }
-            nav .logo input {
-                border-radius: 20px;
-                font-size: 20px;
-                margin-left: 5px;
-            }
-            nav .profile {
-                height: 100%;
-                width: 100%;
-            }
-            nav .profile i{
-                
-                justify-content: center;
-                text-align: center;
-                font-size: 30px;
-                margin-left:  40px;
-                border: 2px solid #ddd;
-                border-radius: 25px;
-                padding: 3px;
-                background-color: #ddd;
-                width: 35px;
-                height: 32px;
-                
-            }
-            
 
-            nav .feat {
-                height: 100%;
-                width: 100%;
-            }
-             nav .feat i{
-                font-size: 30px;
-                margin-left: 40px;
-               
-            }
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 15px 25px;
+            margin: 15px;
+            background-color: #fff;
+
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+
+        }
 
 
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: white;
+        }
 
-        </style>
+        nav .logo i {
+            color: #1877f2;
+            font-size: 2rem;
+            background: white;
+        }
+
+        nav .logo input {
+            border: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            outline: none;
+            border-radius: 25px;
+            background: #f0f2f5;
+
+        }
+
+        nav .profile {
+            display: flex;
+            align-items: centre;
+            gap: 15px;
+            background-color: white;
+
+        }
+
+        nav .profile i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #e4e6eb;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+
+        nav .feat {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            background: white;
+        }
+
+        nav .feat i {
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: white;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            gap: 2rem;
+            padding: 20px;
+        }
+
+        .hero .left {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero .left {
+            position: sticky;
+            top: 90px;
+            height: calc(100vh-90px);
+            overflow-y: auto;
+        }
+
+        .hero .left .user {
+            display: flex;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+            gap: 15px;
+
+        }
+
+        .hero .left .user i {
+            font-size: 2.5rem;
+            color: #1877f2;
+        }
+
+        .hero .left .user p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero .left .watch {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .watch:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .watch i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .events {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .events:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .events i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .friends {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .friends:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .friends i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .memories {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .memories i {
+            font-size: 1.5rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #e4e6eb;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #d8dadf;
+        }
+
+        .hero .left .shortcut {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .hero .left .shortcut i {
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .hiro .left .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero .left .list .first {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .list .first i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .list .first p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .left .list .second {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .list .second i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .list .second p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .left .list .third {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .list .third i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .list .third p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .left .list .fourth {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .list .fourth i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .list .fourth p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .left .list .fifth {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hero .left .memories:hover {
+            background: #e4e6eb;
+        }
+
+        .hero .left .list .fifth i {
+            font-size: 1.5rem;
+        }
+
+        .hero .left .list .fifth p {
+            font-size: 1rem;
+            font-weight: 500;
+            ;
+        }
+
+
+        .story {
+            display: flex;
+            gap: 15px;
+        }
+
+        .story-card {
+            width: 120px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .story-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-card p {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .story-card:hover {
+            transform: scale(1.03);
+            transition: .3s;
+        }
+
+        .hero .middle .first {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: white;
+        }
+
+        .hero .middle {
+            flex: 1;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero .middle .something {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        .hero .middle .something .one {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .hero .middle .something .one i {
+            font-size: 2.5rem;
+            color: #1877f2;
+        }
+
+        .hero .middle .something .one input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            outline: none;
+            background: #f0f2f5;
+            border-radius: 30px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+
+
+        .hero .middle .two {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #ddd;
+            padding-top: 12px;
+        }
+
+        .hero .middle .two p {
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .hero .middle .two p:hover {
+            background: #f0f2f5;
+        }
+
+        .hero .middle .posts {
+
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        .hero .middle .posts .user {
+            display: flex;
+            gap: 15px;
+
+        }
+
+        .hero .middle .posts i {
+
+            font-size: 2.5rem;
+            color: #1877f2;
+        }
+
+        .hero .middle .posts p {
+
+            font-size: 1rem;
+            font-weight: 600;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .hero .middle .posts img {
+
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+        }
+
+        .hero .left {
+            width: 280px;
+            position: sticky;
+            top: 90px;
+            height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+        .hero .right {
+            width: 280px;
+            position: sticky;
+            top: 90px;
+            height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
+
+        .hero .right i {
+            font-size: 2.3rem;
+            color: #1877f2;
+        }
+
+        .hero .right p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .hero .right hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 15px 0;
+        }
+
+        .hero .right .pop-up {
+            border-radius: 15px;
+            background: white;
+            padding: 15px;
+        }
+
+        .hero .right .profile {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hero .middle .two p:hover {
+            background: #0f0f10;
+        }
+
+        .hero .right .profile i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .profile p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+        }
+
+
+        .hero .right .setting i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .setting p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .help {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .hero .right .help i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .help p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .mode {
+            display: flex;
+            gap: 50px ;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .hero .right .mode i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .mode p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .switch {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .hero .right .switch i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .switch p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .feedback {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .hero .right .feedback i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .feedback p {
+            display: flex;
+            font-size: 15px;
+        }
+
+        .hero .right .logout {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .hero .right .logout i {
+            display: flex;
+            font-size: 25px;
+            color: black;
+        }
+
+        .hero .right .logout p {
+            display: flex;
+            font-size: 15px;
+        }
+        
+        .hero .right .people .eric {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .right .people .cynthia {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .right .people .betty {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .right .people .tina {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .right .people .molly {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
 
 
 
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -89,5 +743,195 @@
             <i class="fa-solid fa-angle-down"></i>
         </div>
     </nav>
+    <div class="hero">
+        <div class="left">
+            <div class="user">
+                <i class="fa-solid fa-circle-user"></i>
+                <p>
+                    josephine williams
+                </p>
+            </div>
+            <div class="watch">
+                <i class="fa-solid fa-tv"></i>
+                <p>Watch</p>
+            </div>
+            <div class="events">
+                <i class="fa-solid fa-calendar"></i>
+                <p>Events</p>
+            </div>
+            <div class="friends">
+                <i class="fa-solid fa-user-group"></i>
+                <p>Friends</p>
+            </div>
+            <div class="memories">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <p>Memories</p>
+            </div>
+            <button>see more <i class="fa-solid fa-angle-down"></i></button>
+            <hr>
+            <div class="shortcut">
+                <h5>Shortcuts</h5>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <div class="list">
+                <div class="first">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>save the pomery theatre</p>
+
+                </div>
+                <div class="second">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>weekend trips</p>
+                </div>
+                <div class="third">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>jasper's market</p>
+                </div>
+                <div class="fourth">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>red table talk group</p>
+                </div>
+                <div class="fifth">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>best hidden hiking trails</p>
+                </div>
+
+            </div>
+            <button>see more <i class="fa-solid fa-angle-down"></i></button>
+
+        </div>
+        <div class="middle">
+            <div class="story">
+                <div class="story-card first">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>add to story</p>
+                </div>
+                <div class="story-card second">
+
+                    <img src="image14.jpg" alt="">
+
+                    <p>tom russo</p>
+                </div>
+                <div class="story-card third">
+                    <img src="image14.jpg" alt="">
+                    <p>add to story</p>
+                </div>
+                <div class="story-card fourth">
+                    <img src="image14.jpg" alt="">
+                    <p>add to story</p>
+                </div>
+                <div class="story-card fifth">
+                    <img src="image14.jpg" alt="">
+                    <p>add to story</p>
+                </div>
+
+            </div>
+            <div class="something">
+                <div class="one">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <input type="text" placeholder="whats on your mind,josephine?">
+                </div>
+                <hr>
+                <div class="two">
+                    <p>photos/video</p>
+                    <p>tag friends</p>
+                    <p>feeling/activity</p>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="user">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>fiona ozeri</p>
+                </div>
+                <img src="https://images.pexels.com/photos/12036954/pexels-photo-12036954.jpeg" alt="post">
+
+            </div>
+
+
+
+        </div>
+        <div class="right">
+            <div class="pop-up">
+                <div class="profile">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                        josephine miller
+                    </p>
+                </div>
+                <hr>
+                <div class="setting">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Setting & Privacy</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="help">
+
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Help & Support</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="mode">
+
+                    <i class="fa-solid fa-moon"></i>
+                    <p>Dark Mode</p>
+                    <i class="fa-solid fa-toggle-on"></i>
+                </div>
+                <div class="switch">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <p>Switch to <br>Classic Facebook</p>
+
+                </div>
+                <div class="feedback">
+
+                    <i class="fa-solid fa-message"></i>
+                    <p>Send Feedback</p>
+                </div>
+                <div class="logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Log Out</p>
+                </div>
+            </div>
+            <div class="people">
+                <div class="eric">
+                     <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                        eric
+                    </p>
+                </div>
+                <div class="cynthia">
+                     <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                       cynthia
+                    </p>
+                </div>
+                <div class="betty">
+                     <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                        betty
+                    </p>
+                </div>
+                <div class="tina">
+                     <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                        tina
+                    </p>
+                </div>
+                <div class="molly">
+                     <i class="fa-solid fa-circle-user"></i>
+                    <p>
+                        molly
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
 </body>
+
 </html>
