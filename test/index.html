@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            padding: 0 5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            /* margin: 0 2rem; */
+            padding: 0 15px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: aqua;
+
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 25px;
+
+        }
+
+        .nav-left .Demos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-left .shop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-left .pages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-left .elements {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-left .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-left .more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .location {
+            display: flex;
+            padding-left: 1rem;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .images .tulip img {
+            display: flex;
+            width: 120px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .images .tulip p {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .list-filter {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .list-filter .filter {
+            padding-left: 1rem;
+            border: 1px solid;
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+
+        .list-filter .filter .categories {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .list-filter .filter .Accessories {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list-filter .filter .Accessories p {
+            padding-left: 7rem;
+        }
+
+        .list-filter .list .fast-filter {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .list-filter .list .fast-filter .featured {
+            display: flex;
+            gap: 25px;
+        }
+
+        .list-filter .list .fast-filter .fast p {
+            color: cadetblue;
+        }
+
+        .list-filter .list .fast-filter .featured p {
+            border: 1px solid;
+            padding: 2px;
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+
+        .list-filter .list .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            gap: 3rem;
+            font-size: 20px;
+        }
+
+        .list-filter .list .hero .result {
+            color: cadetblue;
+        }
+
+        .list-filter .list .hero .icons {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+
+        }
+
+        .list-filter .list .hero .latest {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+        }
+
+        .list-filter .list .hero .search input {
+            width: 200px;
+            height: 30px;
+            border-radius: 15px;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        .block-1 {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding-top: 1.3rem;
+
+
+        }
+
+        .block-1 .first {
+            justify-content: center;
+            border: 1px solid;
+            padding: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .block-1 .first img {
+            display: flex;
+            justify-content: center;
+            width: 15rem;
+            object-fit: cover;
+        }
+
+        #blue {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .block-2 {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding-top: 1.3rem;
+
+
+        }
+
+        .block-2 .second {
+            justify-content: center;
+            border: 1px solid;
+            padding: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .block-2 .second img {
+            display: flex;
+            justify-content: center;
+            width: 15rem;
+            object-fit: cover;
+        }
+
+        .Reviews .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .Reviews .star .rate {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .Reviews .star .rate p {
+            padding-left: 10px;
+        }
+
+        .dollar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .range {
+            display: flex;
+        }
+
+        .size {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+        }
+
+        .size .total {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            width: 4.3rem;
+            height: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .size .go {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 10px;
+            width: 3rem;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            border-radius: 15px;
+            background-color: cadetblue;
+            padding: 40px;
+
+        }
+
+        .footer .left-side {
+            width: 30rem;
+            font-size: 1.3rem;
+        }
+
+        .footer .left-side img {
+            height: 40px;
+        }
+        .footer .left-side .email input {
+            width: 200px;
+            height: 30px;
+            border-radius: 15px;
+            
+        }
+        .footer .left-side .email label {
+            background-color: rgb(135, 135, 176);
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .footer .right-side .make {
+            display: flex;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <div class="Demos">
+                <p>Demos</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="shop">
+                <p>Shop</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="pages">
+                <p>Pages</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="elements">
+                <p>Elements</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="features">
+                <p> Core Features</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="more">
+                <p>More</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="nav-right">
+            <p>Special Offers/Resent Viewed</p>
+        </div>
+
+    </nav>
+    <div class="location">
+
+        <p>Home<i class="fa-solid fa-angle-right"></i></p>
+        <p>pages<i class="fa-solid fa-angle-right"></i></p>
+        <p>Shop<i class="fa-solid fa-angle-right"></i></p>
+    </div>
+    <div class="images">
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+        <div class="tulip">
+            <img src="tulip.jpg" alt="tulip">
+            <p>tulip flower</p>
+        </div>
+
+    </div>
+    <hr>
+
+
+    <div class="list-filter">
+        <div class="filter">
+            <h3>Filter & Refine</h3>
+            <div class="categories">
+                <p>Categories</p>
+                <i class="fa-solid fa-angle-up"></i>
+
+            </div>
+
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <div class="Accessories">
+                <input type="checkbox">Accessories
+                <p>(96)</p>
+            </div>
+            <hr>
+            <div class="Reviews">
+                <div class="title">
+                    <h3>Customer Reviews</h3>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="star">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>& Up</p>
+                    </div>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>& Up</p>
+                    </div>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>& Up</p>
+                    </div>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>& Up</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="price">
+                <h3>Filter by price</h3>
+                <div class="dollar">
+                    <div>
+                        <input type="checkbox">Under<i class="fa-solid fa-dollar-sign"></i>25
+                    </div>
+                    <p>(9)</p>
+                </div>
+                <div class="dollar">
+                    <div>
+                        <input type="checkbox"><i class="fa-solid fa-dollar-sign"></i>25 to<i
+                            class="fa-solid fa-dollar-sign"></i>50
+                    </div>
+                    <p>(9)</p>
+                </div>
+                <div class="dollar">
+                    <div>
+                        <input type="checkbox"><i class="fa-solid fa-dollar-sign"></i>50 to<i
+                            class="fa-solid fa-dollar-sign"></i>100
+                    </div>
+                    <p>(9)</p>
+                </div>
+                <div class="dollar">
+                    <div>
+                        <input type="checkbox"><i class="fa-solid fa-dollar-sign"></i>100 to<i
+                            class="fa-solid fa-dollar-sign"></i>200
+                    </div>
+                    <p>(9)</p>
+                </div>
+                <div class="dollar">
+                    <div>
+                        <input type="checkbox"><i class="fa-solid fa-dollar-sign"></i>200 & Above
+                    </div>
+                    <p>(9)</p>
+                </div>
+                <div class="range">
+
+                    <input type="range" min="0" max="100" value="50">
+                    <p><i class="fa-solid fa-dollar-sign"></i>30-<i class="fa-solid fa-dollar-sign"></i>1700</p>
+                </div>
+                <div class="size">
+                    <div class="total">
+                        <i class="fa-solid fa-dollar-sign"></i>Min
+
+                    </div>
+                    <div class="total">
+                        <i class="fa-solid fa-dollar-sign"></i>Max
+
+                    </div>
+                    <div class="go">
+                        <i class="fa-solid fa-dollar-sign"></i>Go
+
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="list">
+            <div class="blog">
+                <div class="fast-filter">
+                    <div class="fast">
+                        <p>Fast Filter:</p>
+                    </div>
+                    <div class="featured">
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                        <p>Featured</p>
+                    </div>
+                </div>
+                <div class="hero">
+
+
+                    <div class="result">
+                        <p>Showing 1-20 of 45 results</p>
+                    </div>
+                    <div class="icons">
+
+                        <i class="fa-solid fa-list"></i>
+                        <i class="fa-solid fa-list"></i>
+                        <i class="fa-solid fa-list"></i>
+
+                    </div>
+                    <div class="latest">
+                        <p id="sort">Sort:</p>
+                        <p>Sort by latest</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <p id="sort">Show</p>
+                        <p>16 items</p>
+                        <i class="fa-solid fa-angle-down"></i>
+
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Search for products">
+
+                    </div>
+
+                </div>
+                <div class="block-1">
+                    <div class="first">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="first">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="first">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+
+                </div>
+                <div class="block-2">
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+
+                </div>
+                <div class="block-2">
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+                    <div class="second">
+                        <img src="tulip.jpg" alt="tulip flower">
+                        <p id="blue">Electronics & Gadgets</p>
+                        <h5>Ultra-Thin Modern Tech Quiet Noise Cancelling Laptop</h5>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <div class="left-side">
+            <img src="https://html.getunimart.com/assets/images/logo/logo.webp" alt="logo">
+
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                more recently with desktop publishing software.</p>
+            <h5>Download App on Mobile:</h5>
+            <div class="apps">
+                <i class="fa-brands fa-app-store"></i>
+                <i class="fa-brands fa-google-play"></i>
+
+            </div>
+            <h5>Subscribe and get discount 20% Off</h5>
+            <div class="email">
+                <input type="text" placeholder="Enter email">
+                <label for="email">Suscribe</label>
+            </div>
+            <div>
+                <p>
+
+                    Need help? Call now!
+
+                    (500) 8001 8588-5
+                </p>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="make">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+            <div class="make">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h5>Let Us Help You</h5>
+                        </li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                        <li>Account Info</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+</html>
