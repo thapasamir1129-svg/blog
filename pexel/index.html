@@ -1,11 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pixel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 15px 20px;
+            font-size: 2rem;
+
+
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+
+        nav .pexels {
+            font-family: cursive;
+            cursor: pointer;
+        }
+
+        nav .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
+        }
+
+        nav .hero button {
+            background: #ddd;
+            padding: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 3rem;
+        }
+
+        .topic {
+            font-size: 2rem;
+
+        }
+
+        .topic .search {
+            margin-top: 3rem;
+            border-radius: 10px;
+            background-color: #ddd;
+            padding: 10px;
+
+        }
+
+        .topic .search input {
+            font-size: 2rem;
+            border: none;
+            background-color: #ddd;
+
+
+
+        }
+
+        .pictures {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .pictures .rose {
+            width: 350px;
+            height: 260px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+
+        }
+
+
+        .rose img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+        }
+
+        .rose:hover {
+            transform: scale(0.9);
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            color: rgb(252, 248, 248);
+            background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+        }
+
+        .overlay h2 {
+            margin: 10px 0;
+        }
+
+        .overlay a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        #one {
+            background: black;
+            color: white;
+            padding: 7px;
+            border-radius: 19px;
+        }
+
+        #two {
+            border-radius: 15px;
+            background: skyblue;
+            padding: 7px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .stock {
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+            margin: 60px 50px 10px;
+
+        }
+
+        #trending {
+            border: 1px solid;
+            padding: 5px;
+            border-radius: 15px;
+            border-color: #ddd;
+            color: #3c3b3b;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 50px;
+        }
+
+        .popular {
+            border: 1px solid #ddd;
+            padding: 7px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+
+        }
+
+        .popu {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .category {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-top: 8px;
+
+
+        }
+
+        .wallpapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 7px;
+            border: 1px solid #ddd;
+            padding: 7px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 20px;
+            border-radius: 75%;
+            object-fit: cover;
+
+        }
+        .long {
+            display: flex;
+            justify-content: space-between;
+            margin: 25px 50px;
+        }
+        .long img {
+            width: 30rem;
+        }
+        .long video {
+            width: 25rem;
+            height: 50rem;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <nav>
+        <div class="pexels">
+            <p>pexels</p>
+        </div>
+        <div class="hero">
+            <div class="explore">
+                <p>Explore <i class="fa-solid fa-angle-down"></i></p>
+
+
+            </div>
+            <div class="liscense">
+                <p>License</p>
+            </div>
+            <div class="dots">
+                <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
+            </div>
+            <button>join</button>
+        </div>
+
+    </nav>
+    <div class="intro">
+        <div class="topic">
+            <h3>The best free stock photos,royalty free images & videos shared by creators.</h3>
+            <div class="search">
+                <label for="photos"><i class="fa-solid fa-image"></i> Photos<i
+                        class="fa-solid fa-angle-down"></i></label>
+                <input type="text" placeholder="Search for free photos">
+            </div>
+        </div>
+        <div class="pictures">
+            <div class="rose">
+                <img src="https://images.pexels.com/photos/12912281/pexels-photo-12912281.png" alt="rose">
+                <div class="overlay">
+                    <p>4 days left</p>
+                    <h2>Your location fashion</h2>
+                    <a href="#">join</a>
+
+                </div>
+
+            </div>
+            <div class="rose">
+                <img src="https://images.pexels.com/photos/12912281/pexels-photo-12912281.png" alt="rose">
+                <div class="overlay">
+                    <p>4 days left</p>
+                    <h2>Your location fashion</h2>
+                    <a href="#">join</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <p id="one">Home</p>
+        <p>Videos</p>
+        <p>leaderboard</p>
+        <p>challenges</p>
+        <p>winners wall</p>
+        <p>The Level up</p>
+        <p id="two">New</p>
+
+    </div>
+    <div class="stock">
+        <p>Free Stock Photos</p>
+        <p id="trending">Trending <i class="fa-solid fa-angle-down"></i></p>
+    </div>
+    <div class="choices">
+        <div class="popular">
+            <div class="popu">
+
+                <p>Popular</p>
+                <p>See more <i class="fa-solid fa-angle-right"></i></p>
+            </div>
+            <div class="category">
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+
+
+            </div>
+
+
+
+        </div>
+        <div class="popular">
+            <div class="popu">
+
+                <p>Popular</p>
+                <p>See more <i class="fa-solid fa-angle-right"></i></p>
+            </div>
+            <div class="category">
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <div class="wallpapper">
+                    <img src="https://images.pexels.com/photos/34244038/pexels-photo-34244038.jpeg" alt="pink rose">
+                    <p>Wallpaper</p>
+                    <p>69K</p>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="gallery">
+        <div class="long">
+            <video src="https://www.pexels.com/download/video/38484914/" controls >video</video>
+            <img src="https://images.pexels.com/photos/37425878/pexels-photo-37425878.jpeg" alt="dog">
+            <img src="https://images.pexels.com/photos/37425878/pexels-photo-37425878.jpeg" alt="dog">
+        </div>
+
+    </div>
 </body>
+
 </html>
