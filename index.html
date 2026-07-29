@@ -1,23 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My Projects</title>
+
+    <style>
+        *{
+            background: #0f172a;
+            color:white;
+            margin: 0;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top:0px;
+            font-family: cursive;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            
+        }
+        h2 {
+            display: flex;
+            justify-content: center;
+            font-family: cursive;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            
+        }
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+           
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             width: 180px;
+            height: 180px;
+            list-style: none;
+            margin: 2rem;
+
+            background: linear-gradient(135deg,#38bdf8,#60a5fa);
+             border: 2px solid #7dd3fc;
+             border-radius: 20px;
+
+            font-size: 1.5rem;
+            font-family: cursive;
+             
+             box-shadow: 0 8px 20px rgba(56,189,248,.3);
+              transition: 0.3s;
+        }
+         li:hover{
+            transform: translate(-10px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(56,189,248,.5);
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            background: transparent;
+            font-weight: bold;
+        }
+       
+
+    </style>
 </head>
+
 <body>
     <h1>My Projects</h1>
+    <h2>HTML + CSS</h2>
 
-    <ul>
-        <li><a href="portfolio/">Portfolio</a></li>
-        <li><a href="loader/">Loader</a></li>
-        <li><a href="pexel/">Pexel</a></li>
-        <li><a href="test/">Test</a></li>
-        <li><a href="day1/">Day 1</a></li>
-        <li><a href="wikipedia/">Wikipedia</a></li>
-        <li><a href="facebook/">Facebook</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="gradingsystem/">Grading System</a></li>
-        <li><a href="https://e-commerce-ckau61xxf-thapasamir1129-6403s-projects.vercel.app/">E-commerce</a></li>
-        <li><a href="https://gloreye-gswi1wwsq-thapasamir1129-6403s-projects.vercel.app/">Gloreye</a></li>
-    </ul>
+
+    <div class="first">
+        <ul>
+             <li><a href="day1/">Day 1</a></li>
+            <li><a href="wikipedia/">Wikipedia</a></li>
+            <li><a href="portfolio/">Portfolio</a></li>
+            
+            
+        </ul>
+
+    </div>
+    <div>
+        <ul>
+            <li><a href="loader/">Loader</a></li>
+            <li><a href="test/">Test</a></li>
+           
+            <li><a href="pexel/">Pexel</a></li>
+            
+        </ul>
+
+    </div>
+    <div>
+        <ul>
+            <li><a href="facebook/">Facebook</a></li>
+            <li><a href="blog/">Blog</a></li>
+            
+        </ul>
+
+    </div>
+    <h2>Tailwint + React</h2>
+    <div>
+        <ul>
+            <li><a href="https://e-commerce-ckau61xxf-thapasamir1129-6403s-projects.vercel.app/">E-commerce</a></li>
+            <li><a href="https://gloreye-gswi1wwsq-thapasamir1129-6403s-projects.vercel.app/">Gloreye</a></li>
+
+        </ul>
+    </div>
+    <h2>java script</h2>
+    <div>
+        <ul>
+            <li><a href="gradingsystem/">Grading <br> System</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
 </body>
+
 </html>
