@@ -14,6 +14,34 @@
             color: white;
             font-family: Arial, sans-serif;
         }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            font-family: none;
+            
+            
+        }
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 50px;
+        }
+        .sites{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            gap: 10px;
+            margin-right: 18rem;
+            /* text-decoration: none; */
+        }
+        a {
+            color: rgb(186, 180, 180);
+            text-decoration: none;
+        }
 
         .container {
             display: flex;
@@ -45,7 +73,7 @@
         }
 
         .buttons button:first-child {
-            background: #9ffe05;
+            background: #98b46b;
             color: #0c0c0c;
             border-color: #0e0f0e;
             border-radius: 5px;
@@ -81,12 +109,11 @@
         .image img {
             width: 400px;
             border-radius: 50%;
-           
+
 
         }
-        a {
 
-        }
+        
     </style>
 
 
@@ -97,7 +124,16 @@
 
 
     <nav>
-        <h3 style="color: rgb(13, 190, 13);">CODENOVA.</h3>
+        <div class="logo">
+            <h3 style="color: rgb(13, 190, 13);">CODENOVA.</h3>
+
+        </div>
+
+        <div class="sites">
+            <a href="about.html">About</a><br><br>
+            <a href="my portfolio.html">My portfolio</a><br><br>
+            <a href="contact.html">Contact</a>
+        </div>
         <!-- <ul>
             <li>Home</li>
             <li>About</li>
@@ -136,11 +172,9 @@
             <img src="https://codenova-portfolio.netlify.app/main/version1/assets/images/home/heroImg.png" width="200"
                 alt="">
         </div>
-        
+
     </div>
-    <a href="about.html">About</a><br><br>
-    <a href="my portfolio.html">My portfolio</a><br><br>
-    <a href="contact.html">Contact</a>
+
     <h3>Zoom in 175%</h3>
 </body>
 

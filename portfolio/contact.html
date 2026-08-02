@@ -4,25 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         body {
+            background: #0d0d0d;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: larger;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+        }
+        .container {
+            display: flex;
+           justify-content: center;
+           gap: 2rem;
+
+        }
+        h2 {
+            font-family:'Courier New', Courier, monospace ;
+            font-size: xx-large;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: small;
+        }
+        .content2 {
+            background: #2d2d2d;
+            padding: 2rem;
+            border-radius: 7px;
+            
+        }
+        .info {
+            padding-bottom: 8px;
+
+        }
+        label {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: small;
+            /* padding-bottom: 5px; */
+        }
+        input {
+            /* border-radius: 4px; */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            width: 8rem;
+            border: white;
+            border-radius: 2px;
+            
+            
+        }
+    </style>
 </head>
 <body>
-     <div>
-        <div>
-            <h5>CONTACT ME</h5>
+    <nav>
+        <h5>CONTACT ME</h5>
+
+    </nav>
+     <div class="container">
+        <div class="content1">
+            
             <h2>LET,S BUILD <br> SOMITHING AMAZING</h2>
-            <p>Have a project in mind or want to collaborate? Let,s create modern digital experiences together.</p>
+            <p>Have a project in mind or want to collaborate? <br> Let,s create modern digital experiences together.</p>
         </div>
-        <div>
+        <div class="content2">
             <form action="">
-                <label for="name">NAME*</label>
+                <div class="info">
+                    <label for="name">NAME*</label>
                 <input type="text" id=" name" placeholder="FULL NAME"><br>
-                <label for="email">email*</label>
+                </div>
+                <div class="info">
+                    <label for="email">email*</label>
                 <input type="email" id="email" placeholder="Email Address"><br>
-                <label for="phone number">phone number*</label>
+                </div>
+                <div class="info">
+                    <label for="phone number">phone number*</label>
                 <input type="tel" id="number" placeholder="PHONE NUMBER"><br>
-                <label for="project type">project type*</label>
+                </div>
+               <div class="info">
+                 <label for="project type">project type*</label>
                 <input type="text" id="project type" placeholder="project type"><br>
-                <textarea name="" id="" cols="30" rows="5" placeholder="Tell me about your project"></textarea><br>
+               </div>
+               <div class="info">
+                 <textarea name="" id="" cols="30" rows="5" placeholder="Tell me about your project"></textarea><br>
+               </div>
                 <button>send message</button>
             </form>
         </div>
